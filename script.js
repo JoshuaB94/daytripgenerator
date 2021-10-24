@@ -59,3 +59,21 @@ function randomizeTransportation(chosenTransportation){
     return chosenTransportation;
 }
 //alert(randomizeTransportation());
+
+//Randomizer for Entertainment
+function randomizeEntertainment(chosenEntertainment){
+    let entertainmentAnswer = Math.floor(Math.random() * typeOfEntertainment.length);
+    if(entertainmentAnswer === 0){
+        chosenEntertainment = typeOfEntertainment[0];
+    } else if(entertainmentAnswer === 1){
+        chosenEntertainment = typeOfEntertainment[1];
+    } else if(entertainmentAnswer === 2){
+        chosenEntertainment = typeOfEntertainment[2];
+    } else if(entertainmentAnswer === 3){
+        chosenEntertainment = typeOfEntertainment[3];
+    } else if(entertainmentAnswer === 4){
+        chosenEntertainment = typeOfEntertainment[4];
+    }
+    return chosenEntertainment;
+}
+//alert(randomizeEntertainment());
