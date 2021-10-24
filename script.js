@@ -22,4 +22,21 @@ function randomizeDestination(chosenDestination){
     }
     return chosenDestination;
 }
-alert(randomizeDestination());
+//alert(randomizeDestination());
+
+function randomizeRestaurant(chosenRestaurant){
+    let restaurantAnswer = Math.floor(Math.random() * mustGoRestaurant.length);
+    if(restaurantAnswer === 0){
+        chosenRestaurant = mustGoRestaurant[0];
+    } else if(restaurantAnswer === 1){
+        chosenRestaurant = mustGoRestaurant[1];
+    } else if(restaurantAnswer === 2){
+        chosenRestaurant = mustGoRestaurant[2];
+    } else if(restaurantAnswer === 3){
+        chosenRestaurant = mustGoRestaurant[3];
+    } else if(restaurantAnswer === 4){
+        chosenRestaurant = mustGoRestaurant[4];
+    }
+    return chosenRestaurant;
+}
+//alert(randomizeRestaurant());
