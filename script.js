@@ -6,7 +6,7 @@ let mustGoRestaurant = ["Oga's Cantina","The Cheesecake Factory","L&L Diner","Sh
 let modeOfTransportation = ["Plane","Boat","DeLorean","Horse Carriage","Bus"];
 let typeOfEntertainment = ['Symphony','Broadway Play','Sight-Seeing','Baseball Game','Watch a Movie'];
 
-
+//Randomizer for Destinations
 function randomizeDestination(chosenDestination){
     let destinationAnswer = Math.floor(Math.random() * mustGoDestination.length);
     if(destinationAnswer === 0){
@@ -24,6 +24,7 @@ function randomizeDestination(chosenDestination){
 }
 //alert(randomizeDestination());
 
+//Randomizer for Restaurants
 function randomizeRestaurant(chosenRestaurant){
     let restaurantAnswer = Math.floor(Math.random() * mustGoRestaurant.length);
     if(restaurantAnswer === 0){
@@ -40,3 +41,21 @@ function randomizeRestaurant(chosenRestaurant){
     return chosenRestaurant;
 }
 //alert(randomizeRestaurant());
+
+//Randomizer for Transportation
+function randomizeTransportation(chosenTransportation){
+    let transportationAnswer = Math.floor(Math.random() * modeOfTransportation.length);
+    if(transportationAnswer === 0){
+        chosenTransportation = modeOfTransportation[0];
+    } else if(transportationAnswer === 1){
+        chosenTransportation = modeOfTransportation[1];
+    } else if(transportationAnswer === 2){
+        chosenTransportation = modeOfTransportation[2];
+    } else if(transportationAnswer === 3){
+        chosenTransportation = modeOfTransportation[3];
+    } else if(transportationAnswer === 4){
+        chosenTransportation = modeOfTransportation[4];
+    }
+    return chosenTransportation;
+}
+//alert(randomizeTransportation());
