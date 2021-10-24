@@ -77,3 +77,12 @@ function randomizeEntertainment(chosenEntertainment){
     return chosenEntertainment;
 }
 //alert(randomizeEntertainment());
+
+//Function results compiled into simplified variables
+let destinationResult = "Destination: " + ' ' + randomizeDestination();
+let restaurantResult = "Restaurant: " + ' ' + randomizeRestaurant();
+let transportationResult = "Transportation: " + ' ' + randomizeTransportation();
+let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
+
+//Pop-up Alertbox with Randomize Results + Result Labels
+alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
