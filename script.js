@@ -84,5 +84,16 @@ let restaurantResult = "Restaurant: " + ' ' + randomizeRestaurant();
 let transportationResult = "Transportation: " + ' ' + randomizeTransportation();
 let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
 
+//Confirm or Decline decalarations
+let userConfirmation = "Yes" || "yes";
+let userRejection = "No" || "no";
+
 //Pop-up Alertbox with Randomize Results + Result Labels
 alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+
+//Satisfaction Prompt for trip details
+prompt("Are you satisfied with your final trip details?");
+    if(userConfirmation){
+        alert("Thank you for traveling with devCodeCamp");
+    }
+    
