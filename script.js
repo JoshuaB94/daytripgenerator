@@ -22,7 +22,6 @@ function randomizeDestination(chosenDestination){
     }
     return chosenDestination;
 }
-//alert(randomizeDestination());
 
 //Randomizer for Restaurants
 function randomizeRestaurant(chosenRestaurant){
@@ -40,7 +39,6 @@ function randomizeRestaurant(chosenRestaurant){
     }
     return chosenRestaurant;
 }
-//alert(randomizeRestaurant());
 
 //Randomizer for Transportation
 function randomizeTransportation(chosenTransportation){
@@ -58,7 +56,6 @@ function randomizeTransportation(chosenTransportation){
     }
     return chosenTransportation;
 }
-//alert(randomizeTransportation());
 
 //Randomizer for Entertainment
 function randomizeEntertainment(chosenEntertainment){
@@ -76,7 +73,6 @@ function randomizeEntertainment(chosenEntertainment){
     }
     return chosenEntertainment;
 }
-//alert(randomizeEntertainment());
 
 //Function results compiled into simplified variables
 let destinationResult = "Destination: " + ' ' + randomizeDestination();
@@ -85,25 +81,54 @@ let transportationResult = "Transportation: " + ' ' + randomizeTransportation();
 let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
 
 
-//Pop-up Alertbox with Final Trip Details
+//#1 - Initial popup with trip details
 alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
 
-//Satisfaction Prompt for trip details
-let userSatisfaction = prompt("Are you satisfied with your trip details? Enter Yes or No.");
-switch(userSatisfaction){
-    case "Yes":
-        alert("Thank you for traveling with devCodeCamp!");
-        break;
-    case "yes":
-        alert("Thank you for traveling with devCodeCamp.");
-        break;
-    case "No":
-        prompt("What trip detail would you like to change?");
-        break;
-    case "no":
-        prompt("What trip detail would you like to change?");
-        break;
-    default:
-        alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
-        break;
+//#2 - Satisfaction prompt
+function userConfirmation(){
+    let userSatisfaction = prompt("Are you satisfied with your trip details? Enter Yes or No.");
+    switch(userSatisfaction){
+        case "Yes":
+            alert("Thank you for traveling with devCodeCamp!");
+            break;
+        case "yes":
+            alert("Thank you for traveling with devCodeCamp!");
+            break;
+        case "No":
+            userAnswer();
+            break;
+        case "no":
+            userAnswer();
+            break;
+        default:
+            alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+            break;
+    }
+}
+alert(userConfirmation());
+
+//#3 - Trip detail change options
+function userAnswer(){
+    let detailChange = prompt("What trip detail would you like to change?\n" + "1 for Destination\n" + "2 for Restaurant\n" + "3 for Transportation\n" + "4 for Entertainment\n");
+    switch(detailChange){
+        case '1':
+            let changeDestination = "Destination: " + ' ' + randomizeDestination();
+            alert("Your Trip Details \n \n" + changeDestination + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+            break;
+        case '2':
+            let changeRestaurant = "Restaurant: " + ' ' + randomizeRestaurant();
+            alert("Your Trip Details \n \n" + destinationResult + '\n' + changeRestaurant + '\n' + transportationResult + '\n' + entertainmentResult);
+            break;
+        case '3':
+            let changeTransporation = "Transportation: " + ' ' + randomizeTransportation();
+            alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + changeTransporation + '\n' + entertainmentResult);
+            break;
+        case '4':
+            let changeEntertainment = "Entertainment: " + ' ' + randomizeEntertainment();
+            alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + changeEntertainment);
+            break;
+        default:
+            alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+            break;
+    }
 }
