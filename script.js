@@ -84,16 +84,26 @@ let restaurantResult = "Restaurant: " + ' ' + randomizeRestaurant();
 let transportationResult = "Transportation: " + ' ' + randomizeTransportation();
 let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
 
-//Confirm or Decline decalarations
-let userConfirmation = "Yes" || "yes";
-let userRejection = "No" || "no";
 
-//Pop-up Alertbox with Randomize Results + Result Labels
+//Pop-up Alertbox with Final Trip Details
 alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
 
 //Satisfaction Prompt for trip details
-prompt("Are you satisfied with your final trip details?");
-    if(userConfirmation){
-        alert("Thank you for traveling with devCodeCamp");
-    }
-    
+let userSatisfaction = prompt("Are you satisfied with your trip details? Enter Yes or No.");
+switch(userSatisfaction){
+    case "Yes":
+        alert("Thank you for traveling with devCodeCamp!");
+        break;
+    case "yes":
+        alert("Thank you for traveling with devCodeCamp.");
+        break;
+    case "No":
+        prompt("What trip detail would you like to change?");
+        break;
+    case "no":
+        prompt("What trip detail would you like to change?");
+        break;
+    default:
+        alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+        break;
+}
