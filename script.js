@@ -85,6 +85,7 @@ let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
 alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
 
 //#2 - Satisfaction prompt
+userConfirmation();
 function userConfirmation(){
     let userSatisfaction = prompt("Are you satisfied with your trip details? Enter Yes or No.");
     switch(userSatisfaction){
@@ -105,7 +106,6 @@ function userConfirmation(){
             break;
     }
 }
-alert(userConfirmation());
 
 //#3 - Trip detail change options
 function userAnswer(){
