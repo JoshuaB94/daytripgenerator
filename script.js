@@ -80,7 +80,6 @@ let restaurantResult = "Restaurant: " + ' ' + randomizeRestaurant();
 let transportationResult = "Transportation: " + ' ' + randomizeTransportation();
 let entertainmentResult = "Entertainment: " + ' ' + randomizeEntertainment();
 
-
 //#1 - Initial popup with trip details
 alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
 
@@ -114,18 +113,22 @@ function userAnswer(){
         case '1':
             let changeDestination = "Destination: " + ' ' + randomizeDestination();
             alert("Your Trip Details \n \n" + changeDestination + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
+            userConfirmation();
             break;
         case '2':
             let changeRestaurant = "Restaurant: " + ' ' + randomizeRestaurant();
             alert("Your Trip Details \n \n" + destinationResult + '\n' + changeRestaurant + '\n' + transportationResult + '\n' + entertainmentResult);
+            userConfirmation();
             break;
         case '3':
             let changeTransporation = "Transportation: " + ' ' + randomizeTransportation();
             alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + changeTransporation + '\n' + entertainmentResult);
+            userConfirmation();
             break;
         case '4':
             let changeEntertainment = "Entertainment: " + ' ' + randomizeEntertainment();
             alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + changeEntertainment);
+            userConfirmation();
             break;
         default:
             alert("Your Trip Details \n \n" + destinationResult + '\n' + restaurantResult + '\n' + transportationResult + '\n' + entertainmentResult);
